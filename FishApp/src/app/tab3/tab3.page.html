@@ -1,0 +1,95 @@
+<ion-header mode='md'>
+  <ion-toolbar>
+    <ion-title>
+      Review Orders    
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list class="fishlist" class="ion-no-padding" lines="inset">
+    <ion-item-divider color="light">
+    <ion-label class="divider-font">
+      Items
+    </ion-label>
+  </ion-item-divider>
+    <ion-item *ngFor="let item of cart" >
+      <div style="float:left;width: 100px">
+        <ion-img slot="start" [src]="item.images[0].src" class="cart-img"></ion-img> 
+      </div>
+      
+      <div style="float:left;width: 40%;margin-left: 10px;margin-right: 10px;margin-bottom: 10px;">
+        <ion-label style="font-weight: bold;font-size: 11px;color:#292828f2" class="ion-text-wrap">
+          {{item.name}}
+        </ion-label>
+        <ion-label *ngIf="item.regular_price > item.price" style="font-size: 10px;color: gray;margin-top: 5px;margin-bottom: 3px;">
+          {{item.regular_price}}
+        </ion-label>
+        <ion-label style="font-weight: bold;font-size: 10px;">
+          {{item.price}}
+        </ion-label>
+      </div>
+      
+      <div style="float: right; width: 80px; margin-left: 10px;">
+        <div class="cart-btns">
+            <div class="add-remove" *ngIf="cart.length > 0">
+              <ion-icon (click)="decrement(item)" style="display: inline-block;padding-right: 5px;padding-left: 5px;" name="remove-outline" class="removecls"> + </ion-icon>
+              <div style="display: inline-block;width: 25px;font-weight:500;text-align: center;" class="qtycls">{{item.o_count}}</div>
+              <ion-icon (click)="increment(item)" style="display: inline-block;padding-top: 2px;" name="add-outline" class="addcls"> + </ion-icon>
+            </div>
+        </div> 
+      </div>
+    </ion-item>
+  </ion-list>
+  
+  <ion-list class="billdtls ion-no-margin" lines="full">
+    <ion-item-divider color="light">
+    <ion-label class="divider-font">
+      Bill Details
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-item lines="none" class="price-txt">
+    <div style="float: left;width: 50%">Item Total</div>
+    <div style="float: right;width: 50%" class="ion-text-end">{{total_amount}}</div>
+
+  </ion-item>
+  <ion-item lines="none" class="price-txt">
+    <div style="float: left;width: 50%">Shipping</div>
+    <div style="float: right;width: 50%" class="ion-text-end">{{ship_charge}}</div>
+  </ion-item>
+
+  <ion-item class="price-txt" *ngIf="promo_charge > 0" >
+    <div style="float: left;width: 50%">PROMO-{{promo_code}}</div>
+    <div style="float: right;width: 50%" class="ion-text-end">-{{promo_charge}}</div>
+  </ion-item>
+
+  <ion-item class="total-price-txt">
+    <div style="float: left;width: 50%">To Pay</div>
+    <div style="float: right;width: 50%" class="ion-text-end">{{(total_amount+ship_charge)-promo_charge}}</div>
+  </ion-item>
+
+  </ion-list>
+
+    <ion-item-divider color="light" class="couponbtn">
+    </ion-item-divider>
+    <ion-item button lines="full" (click)="couponAlert()" detail mode="ios">
+      <ion-icon name="ribbon-outline" color="danger"></ion-icon>
+      <ion-label style="margin-left:10px" class="divider-font"  color="primary">APPLY COUPON</ion-label>
+    </ion-item>
+    <ion-item-divider color="light" class="couponbtn">
+    </ion-item-divider>
+</ion-content>
+<ion-footer  class="ion-no-padding">
+  <ion-toolbar color="primary" mode="ios" size="small">
+    <ion-label slot="start" >
+      <ion-text class="itemcount" color="light">{{itemcount}} Item</ion-text>
+      <ion-text class="totalprice" color="light">₹{{(total_amount+ship_charge)-promo_charge}}</ion-text>
+    </ion-label>
+
+    <ion-button slot="end" size="small" fill="clear" class="ion-text-bold" style="font-weight: bold;font-size: 12px;color:#292828f2" color="light" (click)="placeOrder()">
+      PLACE ORDER
+      <ion-icon name="caret-forward-sharp"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

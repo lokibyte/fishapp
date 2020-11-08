@@ -1,0 +1,61 @@
+{
+    "offers":[
+       {
+          "couponcode":"COUPN 100",
+          "title":"Get 15% discount using HDFC Bank PayZapp Card",
+          "subtitle":"Use code PAYZAPP100 & get 15% discount up to Rs.100 on orders above Rs.250",
+          "tncTitle":"Terms and Conditions",
+          "tncs":[
+          	"Offer valid twice per user per month",
+			"Offer valid on a minimum cart value of Rs.250",
+			"Offer valid only on HDFC Bank PayZapp Prepaid Card",
+			"The maximum available discount per transaction is Rs.100",
+			"Other T&C's may apply",
+			"Offer valid till Sep 30, 2020 23:59 PM"
+          ]
+          
+       },{
+          "couponcode":"COUPN 101",
+          "title":"Get 15% discount using HDFC Bank PayZapp Card",
+          "subtitle":"Use code PAYZAPP100 & get 15% discount up to Rs.100 on orders above Rs.250",
+          "tncTitle":"Terms and Conditions",
+          "tncs":[
+          	"Offer valid twice per user per month",
+			"Offer valid on a minimum cart value of Rs.250",
+			"Offer valid only on HDFC Bank PayZapp Prepaid Card",
+			"The maximum available discount per transaction is Rs.100",
+			"Other T&C's may apply",
+			"Offer valid till Sep 30, 2020 23:59 PM"
+          ]
+          
+       },{
+          "couponcode":"COUPN 102",
+          "title":"Get 15% discount using HDFC Bank PayZapp Card",
+          "subtitle":"Use code PAYZAPP100 & get 15% discount up to Rs.100 on orders above Rs.250",
+          "tncTitle":"Terms and Conditions",
+          "tncs":[
+          	"Offer valid twice per user per month",
+			"Offer valid on a minimum cart value of Rs.250",
+			"Offer valid only on HDFC Bank PayZapp Prepaid Card",
+			"The maximum available discount per transaction is Rs.100",
+			"Other T&C's may apply",
+			"Offer valid till Sep 30, 2020 23:59 PM"
+          ]
+          
+       },{
+          "couponcode":"COUPN 103",
+          "title":"Get 15% discount using HDFC Bank PayZapp Card",
+          "subtitle":"Use code PAYZAPP100 & get 15% discount up to Rs.100 on orders above Rs.250",
+          "tncTitle":"Terms and Conditions",
+          "tncs":[
+          	"Offer valid twice per user per month",
+			"Offer valid on a minimum cart value of Rs.250",
+			"Offer valid only on HDFC Bank PayZapp Prepaid Card",
+			"The maximum available discount per transaction is Rs.100",
+			"Other T&C's may apply",
+			"Offer valid till Sep 30, 2020 23:59 PM"
+          ]
+          
+       }
+    ]
+}

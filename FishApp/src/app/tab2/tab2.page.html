@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large">Offers</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item-divider color="light">
+      <ion-label class="divider-font">AVAILABLE COUPONS</ion-label>
+    </ion-item-divider>
+
+    <ion-item *ngFor="let offer of offers" mode="ios">
+    <ion-label>
+    <ion-chip color="tertiary bold"> <ion-text class="couponcode">{{offer.couponcode}}</ion-text></ion-chip>
+    <h3 class="ion-text-wrap tnctxt bold">{{offer.title}}</h3>
+    <p class="ion-text-wrap tnctxt">{{offer.subtitle}}</p>
+    <ion-button  class="readmore" fill="outline" size="small" color="orange" (click)="onHdrClick(offer)">Read More</ion-button>
+    <div *ngIf="offer.tnctapped">
+    <h4 class="ion-text-wrap tnctxt tnctitle">{{offer.tncTitle}}</h4>
+    <ul *ngFor="let tnc of offer.tncs">
+      <li class="ion-text-wrap tnctxt">{{tnc}}</li>
+    </ul>
+  </div>
+  </ion-label>
+    
+    </ion-item>
+  </ion-list>
+</ion-content>

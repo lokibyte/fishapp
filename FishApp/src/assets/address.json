@@ -1,0 +1,32 @@
+{
+    "address":[
+      {
+          "name":"home",
+          "block":"#294",
+          "landmark":"siddi vinayaka temple",
+          "location":"2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "format_address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi"
+      },
+      {
+          "name":"work",
+          "block":"#295",
+          "landmark":"Ganesha temple",
+          "location":"2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "format_address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi"
+      },
+      {
+          "name":"other",
+          "block":"#293",
+          "landmark":"Venkateswara temple",
+          "location":"2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "format_address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi"
+      },
+      {
+          "name":"temp",
+          "block":"#290",
+          "landmark":"near karunadu hotel",
+          "location":"2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "format_address":"#290,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi"
+      }
+    ]
+}

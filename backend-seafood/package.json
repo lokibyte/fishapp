@@ -1,0 +1,19 @@
+{
+  "name": "com.ind.helpline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faye": "^1.2.4",
+    "mysql": "^2.18.1",
+    "sha1": "^1.1.1"
+  }
+}

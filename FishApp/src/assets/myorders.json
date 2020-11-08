@@ -1,0 +1,87 @@
+{
+    "orders":[
+      {
+          "date":"September 15,2020 at 12:45 PM",
+          "total_amt":"950.00",
+          "status":"InProgress",
+          "order_dtls":{
+            "order_id":"1231413434",
+            "payment":"card",
+            "payment_date":"September 14,2020 at 9:00 PM"
+          },
+          "address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "items":[
+          	{
+              "qty":"1",
+              "item":{
+                "name":"Mathi",
+                "icon":"https://static.freshtohome.com/media/catalog/product/cache/0/image/600x400/18ae109e34f485bd0b0c075abec96b2e/l/a/large_1.jpg",
+                "amount":"950.00"
+              }
+            }
+          ]
+      },
+      {
+          "date":"September 05,2020 at 12:45 PM",
+          "total_amt":"950.00",
+          "status":"Delivered",
+          "order_dtls":{
+            "order_id":"1231413434",
+            "payment":"card",
+            "payment_date":"September 04,2020 at 9:00 PM"
+          },
+          "address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "items":[
+            {
+              "qty":"1",
+              "item":{
+                "name":"Mathi",
+                "icon":"https://static.freshtohome.com/media/catalog/product/cache/0/image/600x400/18ae109e34f485bd0b0c075abec96b2e/l/a/large_1.jpg",
+                "amount":"950.00"
+              }
+            }
+          ]
+      },{
+          "date":"Aug 05,2020 at 12:45 PM",
+          "total_amt":"950.00",
+          "status":"Cancelled",
+          "order_dtls":{
+            "order_id":"1231413434",
+            "payment":"card",
+            "payment_date":"Aug 04,2020 at 9:00 PM"
+          },
+          "address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "items":[
+            {
+              "qty":"1",
+              "item":{
+                "name":"Mathi",
+                "icon":"https://static.freshtohome.com/media/catalog/product/cache/0/image/600x400/18ae109e34f485bd0b0c075abec96b2e/c/o/combo_mathi_and_ayala_cleaned__1.jpg",
+                "amount":"950.00"
+                
+              }
+            }
+          ]
+      },{
+          "date":"January 05,2020 at 12:45 PM",
+          "total_amt":"950.00",
+          "status":"Delivered",
+          "order_dtls":{
+            "order_id":"1231413434",
+            "payment":"card",
+            "payment_date":"January 04,2020 at 9:00 PM"
+          },
+          "address":"#294,2nd cross,8th main,Canara Bank colony,kalyan Nagar, Nagarbhavi",
+          "items":[
+            {
+              "qty":"1",
+              "item":{
+                "name":"Mathi",
+                "icon":"https://static.freshtohome.com/media/catalog/product/cache/0/image/600x400/18ae109e34f485bd0b0c075abec96b2e/c/o/combo_mathi_and_ayala_cleaned__1.jpg",
+                "amount":"950.00"
+              }
+            }
+          ]
+      }
+    ]
+}

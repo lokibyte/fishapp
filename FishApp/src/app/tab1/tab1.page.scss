@@ -1,0 +1,54 @@
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .btn {
+    display: inline-block;
+    font-size: 12px;
+    height: 27px;
+  }
+  .selectedCls{
+  	background-color: #28ba62;
+  	color: white;
+  }
+}
+.homesearch{
+	padding: 1px;
+	height: 30px;
+	
+	&.searchbar-cancel-button .sc-ion-searchbar-ios{
+		font-size:12px;
+	}
+}
+.fishlist{
+	ion-img{
+		height: 80px;
+	}
+	.add-remove{
+	    margin-left: 20px;
+	    align-items: center;
+	    border: 1px solid gray;
+	    border-radius: 4px;
+	    height: 24px;
+	    color: #08af1d;
+	}
+	.add-remove1{
+        margin-left: 25px;
+	    margin-top: -10px;
+	    height: 24px;
+	    font-weight: bold;
+	}
+}
+
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+  line-height: 13px;
+}
+
+.custom-skeleton ion-skeleton-text:last-child {
+  margin-bottom: 5px;
+}
+ #skeleton {
+  display: block;
+}

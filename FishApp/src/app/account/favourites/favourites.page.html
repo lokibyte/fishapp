@@ -1,0 +1,36 @@
+<ion-header >
+  <ion-toolbar color="primary" size="small" mode="md">
+    <ion-buttons slot="start">
+    <ion-back-button defaultHref="/tabs/tab4"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+    <ion-item-divider color="light">
+      <ion-label class="divider-font">My Orders</ion-label>
+    </ion-item-divider>
+
+    <ion-item *ngFor="let order of myorders" mode="ios">
+	<ion-thumbnail slot="start" class="order-item-thumb">
+		<ion-img [src]="order.items[0].item.icon"></ion-img>
+	</ion-thumbnail>
+    
+    <ion-label>
+		<p>Items</p>
+		<h4 *ngFor="let _item of order.items" class="ion-text-wrap order-txt">
+	      <div>{{_item.qty}} X {{_item.item.name}}</div>
+	    </h4>
+		<p>Ordered On</p>
+		<ion-text class="order-txt">{{order.date}}</ion-text>
+
+		<p>Total</p>
+		<ion-text class="order-txt">{{order.total_amt}}</ion-text>
+
+	</ion-label>
+	<ion-button color="primary" fill="outline" (click)="onReOrder(order)">Reorder</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

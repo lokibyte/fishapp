@@ -1,0 +1,88 @@
+<ion-header >
+  <ion-toolbar mode="md" color="primary">
+    <ion-title >
+      Coastal Fish
+    </ion-title>
+    <ion-buttons slot="end" *ngIf="!showsearchbar">
+      <ion-button (click)="showSearch()">
+        <ion-icon  name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="showsearchbar" mode="ios" color="primary">
+    <ion-searchbar
+      class="homesearch"
+      placeholder="Search.."
+      showCancelButton="focus"
+      (ionBlur)="searchFocusOut()"
+      showcancelbutton=""
+      (ionInput)="filterList($event)"
+      >
+    </ion-searchbar>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="!showsearchbar" mode="ios">
+    <div class="scrolling-wrapper" *ngIf="categories.length">
+      <ion-chip class="btn" color="success" mode="ios" *ngFor="let category of categories;let i=index" [class.selectedCls]="selectedFltr == i" (click)="onFilter(category,i)">
+        <ion-label >{{category.name}}</ion-label>
+      </ion-chip>
+    </div>
+
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content >
+  <ion-list class="fishlist" *ngIf="fishes.length">
+    <ion-item *ngFor="let item of fishes" style="">
+      
+      <div style="float:left;width: 70%">
+        <ion-label style="font-weight: bold;font-size: 12px;color:#292828f2" class="ion-text-wrap">
+          {{item.name}}
+        </ion-label>
+        <ion-label  *ngIf="item.regular_price > item.price" style="font-size: 12px;color: gray;margin-top: 10px;margin-bottom: 3px;">
+          {{item.regular_price}}
+        </ion-label>
+        <ion-label  style="font-weight: bold;font-size: 12px;">
+          {{item.price}}
+        </ion-label>
+      </div>
+      
+      <div style="float:right;width: 30%;margin:5px;">
+        <ion-img [src]="item.images[0].src"></ion-img> 
+        <div class="cart-btns">
+            <ion-button class="add-remove1" size="small" color="primary" mode="ios" (click)="increment(item)" *ngIf="!item.o_count">Add</ion-button>
+            <div class="add-remove" *ngIf="item.o_count > 0">
+              <ion-icon (click)="decrement(item)" style="display: inline-block;padding-right: 5px;padding-left: 5px;" name="remove-outline" class="removecls"> + </ion-icon>
+              <div style="display: inline-block;width: 25px;font-weight:500;text-align: center;" class="qtycls">{{item.o_count}} </div>
+              <ion-icon (click)="increment(item)" style="display: inline-block;padding-top: 2px;" name="add-outline" class="addcls"> + </ion-icon>
+            </div>
+        </div> 
+      </div>
+    </ion-item>
+  </ion-list> 
+
+  <!-- Skeleton screen -->
+  <ion-list *ngIf="!fishes.length" id="skeleton">
+    
+    <ion-item *ngFor="let itm of numbers">
+      <ion-thumbnail slot="end">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+
+    </ion-item>
+    
+  </ion-list>
+
+</ion-content>

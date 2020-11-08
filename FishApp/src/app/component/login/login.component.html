@@ -1,0 +1,45 @@
+<ion-content fullscreen="true" class="blurred-bg">
+	<ion-header class="ion-no-border" translucent="true" no-border>
+	
+	<ion-toolbar>
+		<ion-buttons slot="start" >
+		  <ion-button (click)="goBack()" [hidden]="!otpsent" mode="md" color="danger">
+		    <ion-icon name="arrow-back"></ion-icon>
+		  </ion-button>
+		</ion-buttons>
+		<ion-buttons slot="end" >
+		  	<ion-button (click)="dismiss()" [hidden]="otpsent" mode="md" color="danger">
+		    <ion-icon name="close"></ion-icon>
+		  </ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+
+	</ion-header>
+
+	<ion-img class="logoimg logo-wrapper" [src]="logoimg"></ion-img>
+	
+	<ion-item-group class="ion-padding ion-margin login-items" [hidden]="otpsent">
+		<ion-label class="text-size ion-padding">Login or Sign up to place your order</ion-label>
+		<ion-item class="ion-margin-bottom" >
+			<ion-label>+91</ion-label>
+			<ion-input name="mobilenumber" placeholder="Phone Number" type="phone" (ionChange)="phoneChange($event)" clearInput></ion-input>
+		</ion-item>
+			
+			
+	    <ion-button class="ion-margin-top" expand="block" mode="md" (click)="verifyMobile()"> Continue</ion-button>
+	</ion-item-group>
+	
+
+	<ion-item-group class="ion-padding ion-margin login-items" [hidden]="!otpsent">
+		
+		<ion-label class="text-size ion-padding">OTP sent to {{mobilenumber}}</ion-label>
+		
+		<ion-item class="ion-margin-bottom" >
+			<ion-input placeholder="Enter OTP" type="number" (ionChange)="otpChange($event)" clearInput></ion-input>
+		</ion-item>
+
+	    <ion-button class="ion-margin-top" expand="block" mode="md" (click)="verifyOtp()"> Verify</ion-button>
+	  
+	</ion-item-group>
+	
+</ion-content>
